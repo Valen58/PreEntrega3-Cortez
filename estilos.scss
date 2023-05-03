@@ -1,0 +1,746 @@
+$primary-color: rgb(97, 0, 0);
+$secondary-color: rgb(73, 0, 0);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background-color: black;
+}
+
+header{
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  padding: 10px;
+  align-items: center;
+
+  .logo{
+    display: flex;
+
+    .logoImg{
+      margin-top: 2px;
+      height: 100px;
+    }
+
+    .logoTexto{
+      margin-top: 30px;
+      font-size: 50px;
+      color: black;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 600;
+    }
+  }
+}
+
+main{
+  height: 130vh;
+  width: 100%;
+  background-color: black;
+  background-size: cover;
+
+  .tituloPagina{
+    text-align: center;
+    color: $secondary-color;
+    font-size: 35px;
+    padding-top: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px 200px 200px;
+    gap: 10px;
+
+    .img{
+      border: 3px solid $secondary-color;
+    }
+
+    .img1{
+      background-image: url(./img/gigelec.jpg);
+      background-size: cover;
+      grid-area: 1 / 1 / 4 / 1 ;
+
+      a{
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        color: yellow;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border: 3px solid red;
+        background-color: $secondary-color;
+        text-align: right;
+      }
+    }
+
+    .img2{
+      background-image: url(./img/ampli.webp);
+      background-size: cover;
+      grid-area: 1 / 2 / 4 / 4;
+
+      a{
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        color: yellow;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border: 3px solid red;
+        background-color: $secondary-color;
+        text-align: right;
+      }
+    }
+    .img3{
+        background-image: url(./img/gigac.jpg);
+        background-size: cover;
+        grid-area: 1 / 4 / 4 / 4;
+        
+        a {
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        color: yellow;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border: 3px solid red;
+        background-color: rgb(73, 0, 0);
+        text-align: right;
+        }
+        }
+        
+        .img4{
+        background-image: url(./img/bajo.jpg);
+        background-size: cover;
+        margin: auto;
+        place-items: center;
+        width: 950px;
+        height: 350px;
+        grid-area: 4/1/4/5;
+        
+        a {
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        color: yellow;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border: 3px solid red;
+        background-color: rgb(73, 0, 0);
+        text-align: right;
+        }
+        }
+    }
+}
+
+.img{
+    border: 3px solid $secondary-color;
+    transition: all 0.3s ease-in-out; 
+  }
+  
+  .img:hover{
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+
+@media screen and (max-width: 480px) {
+    .galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    .img1 {
+        grid-area: 1 / 1 / 1 / 1;
+        width: fit-content;
+      }
+      
+      .img2 {
+        grid-area: 2 / 1 / 2 / 1;
+        width: fit-content;
+      }
+      
+      .img3 {
+        grid-area: 3 / 1 / 3 / 3;
+        width: fit-content;
+      }
+      
+      .img4 {
+        grid-area: 4 / 1 / 3 / 3;
+        width: fit-content;
+      }
+    }
+}
+
+.sobreNosotros {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+    .tituloSN {
+    background-image: url(./img/fondo.jpg);
+    height: 50px;
+    text-align: center;
+    font-size: 35px;
+    color: rgb(73, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    .contenedorCaja {
+    display: flex;
+    justify-content: flex-end;
+
+    .caja {
+        margin-top: 50px;
+        margin-right: 50px;
+        flex: 0 0 auto;
+        display: flex;
+        color: aliceblue;
+        width: 430px;
+        height: 340px;
+        background-color: rgb(73, 0, 0);
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    }
+}
+.galeria2 {
+    transform: translateY(100px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 600px 600px;
+    
+    .imag {
+        border: 3px solid rgb(73, 0, 0);
+      
+        &.imag1 {
+          background-image: url(./img/guitarras.png);
+          background-size: cover;
+        }
+      
+        &.imag2 {
+          background-image: url(./guitarraass.jpeg);
+          background-size: cover;
+        }
+      }
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        margin-top: 700px;
+        height: 110px;
+        background-color: rgb(29, 29, 29);
+        font-size: 20px;
+        
+        .redes {
+        font-size: 50px;
+        align-items: baseline;
+        margin-left: auto;
+        }
+        
+        p {
+        text-align: center;
+        flex: 1;
+        }
+        }
+        
+        /* Electricas */
+        
+        .navegacion {
+        a {
+        margin: 10px;
+        text-decoration: none;
+        color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 25px;
+        }
+        }
+        
+        .fender {
+        height: 50px;
+        background-color: azure;
+        text-align: center;
+        font-size: 40px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+       
+    }
+
+    .descripcionFender {
+        background-color: rgb(27, 27, 27);
+        transform: translateY(-2500px);
+        width: 800px;
+        height: 400px;
+        margin: 0 auto;
+        border: solid 5px red;
+        
+        .tituloFender {
+            font-size: 50px;
+            text-decoration: underline;
+            color: red;
+            text-align: center;
+          }
+          
+          .textoFender {
+            text-align: center;
+            font-size: 25px;
+            color: antiquewhite;
+          }
+        }
+        
+    .galeriaGig {
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 400px 400px 400px;
+        margin-top: 100px;
+        column-gap: 400px;
+        row-gap: 200px;
+        justify-content: center;
+        
+        .imgGig {
+        background-color: aliceblue;
+        border: 3px solid red;
+        }
+        
+        .imgGig1 {
+        background-image: url(./img/fender1.webp);
+        background-size: cover;
+        }
+        
+        .imgGig2 {
+        background-image: url(./img/fender2.webp);
+        background-size: cover;
+        }
+        
+        .imgGig3 {
+        background-image: url(./img/fender3.webp);
+        background-size: cover;
+        }
+        
+        .imgGig4 {
+        background-image: url(./img/fender4.webp);
+        background-size: cover;
+        }
+        
+        .imgGig5 {
+        background-image: url(./img/fender5.webp);
+        background-size: cover;
+        }
+        
+        .imgGig6 {
+        background-image: url(./img/fender6.webp);
+        background-size: cover;
+        }
+        
+        @media screen and (max-width: 480px) {
+        .fender {
+        font-size: 30px;
+        }
+    }
+}
+
+.imgGig {
+    background-color: aliceblue;
+    border: 3px solid red;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.imgGig:hover {
+    transform: translateY(-10px); 
+}
+
+.galeriaGig {
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: repeat(7, 400px);
+  
+    .descripcionFender {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .navegacion {
+    a {
+      font-size: 20px;
+    }
+  }
+  
+  .gibson {
+    background-color: aliceblue;
+    height: 50px;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    transform: translateY(-100px);
+  }
+
+  .galeriaGig2{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 400px);
+    column-gap: 400px;
+    row-gap: 200px;
+    justify-content: center;
+
+    .imgGig2{
+        background-color: aliceblue;
+        border: 3px solid red;
+    
+        &.imgGig21{
+            background-image: url(./img/gig1.png);
+            background-size: cover;
+        }
+    
+        &.imgGig22{
+            background-image: url(./img/gig2.png);
+            background-size: cover;
+        }
+    
+        &.imgGig23{
+            background-image: url(./img/gig3.png);
+            background-size: cover;
+        }
+    
+        &.imgGig24{
+            background-image: url(./img/gig4.png);
+            background-size: cover;
+        }
+    
+        &.imgGig25{
+            background-image: url(./img/gig5.png);
+            background-size: cover;
+        }
+    
+        &.imgGig26{
+            background-image: url(./img/gig6.png);
+            background-size: cover;
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        .gibson{
+            font-size: 30px;
+        }
+    
+        & {
+            grid-template-columns: 200px;
+            grid-template-rows: repeat(7, 400px);
+        }
+    }
+  }
+
+  .imgGig2 {
+    background-color: aliceblue;
+    border: 3px solid red;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.imgGig2:hover {
+    transform: translateY(-10px); 
+}
+  
+  .descripcionGibson{
+    background-color: rgb(27, 27, 27);
+    transform: translateY(-500px);
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    border: solid 5px red;
+
+    @media screen and (max-width: 480px) {
+        & {
+            width: 100%;
+            height: auto;
+        }
+    }
+  }    
+
+  .tituloGibson{
+    font-size: 50px;
+    text-decoration: underline;
+    color: red;
+    text-align: center;
+    }
+    
+    .textoGibson{
+    text-align: center;
+    font-size: 25px;
+    color: antiquewhite;
+    }
+    
+    .footerElectricas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-top: 100px;
+    height: 110px;
+    background-color: #1d1d1d;
+    font-size: 20px;
+    }
+    
+    /* amplificadores */
+    
+    .marshall{
+    background-color: #2b2b2b;
+    height: 50px;
+    
+    p{
+    text-align: center;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+    color: #9b9b00;
+    }
+    }
+    
+    .galeriaAmp{
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 300px;
+    column-gap: 100px;
+    justify-content: center;
+    margin-top: 600px;
+    
+    .imgAmp{
+    background-color: #f0f8ff;
+    border: solid 3px #1f1f1f;
+    }
+    
+    .imgAmp1{
+    background-image: url(./img/amp1.png);
+    }
+    
+    .imgAmp2{
+    background-image: url(./img/amp2.png);
+    }
+    }
+    
+    .mainMarshall{
+    background-image: url(./img/fondoMarshall.png);
+    background-size: cover;
+    }
+    
+    .ampFender{
+    background-color: #2b2b2b;
+    height: 50px;
+    
+    p{
+    text-align: center;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+    color: #580000;
+    }
+    }
+    
+    .mainAmpFender{
+    background-image: url(./img/fondoFender.jpg);
+    background-size: cover;
+    }
+    
+    .galeriaAmp2{
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 300px;
+    column-gap: 100px;
+    justify-content: center;
+    margin-top: 600px;
+    
+    .imgAmp2{
+    background-color: #f0f8ff;
+    border: solid 3px #1f1f1f;
+    }
+    
+    .imgAmp21{
+    background-image: url(./img/amp3.webp);
+    background-size: cover;
+    }
+    
+    .imgAmp22{
+    background-image: url(./img/amp4.webp);
+    background-size: cover;
+    }
+    }
+
+    .imgAmp {
+        background-color: aliceblue;
+        border: 3px solid red;
+        transition: transform 0.3s ease-in-out; 
+    }
+    
+    .imgAmp:hover {
+        transform: translateY(-10px); 
+    }
+
+    .imgAmp2 {
+        background-color: aliceblue;
+        border: 3px solid red;
+        transition: transform 0.3s ease-in-out; 
+    }
+    
+    .imgAmp2:hover {
+        transform: translateY(-10px); 
+    }
+
+    .footerAmp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        margin-top: 100px;
+        height: 110px;
+        background-color: rgb(29, 29, 29);
+        font-size: 20px;
+        }
+        
+        /* Acusticas */
+        
+        .galeriaAc {
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 400px 400px 400px;
+        margin-top: 100px;
+        column-gap: 400px;
+        row-gap: 200px;
+        justify-content: center;
+        }
+        
+        .imgAc {
+        background-color: aliceblue;
+        border: 3px solid yellow;
+        }
+        
+        .imgAc1 {
+        background-image: url(./img/ac1.webp);
+        background-size: cover;
+        }
+        
+        .imgAc2 {
+        background-image: url(./img/ac2.webp);
+        background-size: cover;
+        }
+        
+        .imgAc3 {
+        background-image: url(./img/ac3.webp);
+        background-size: cover;
+        }
+        
+        .imgAc4 {
+        background-image: url(./img/ac4.webp);
+        background-size: cover;
+        }
+        
+        .imgAc5 {
+        background-image: url(./img/ac5.webp);
+        background-size: cover;
+        }
+        
+        .imgAc6 {
+        background-image: url(./img/ac6.webp);
+        background-size: cover;
+        }
+        
+        .imgAc7 {
+        background-image: url(./img/ac7.webp);
+        background-size: cover;
+        }
+        
+        .imgAc8 {
+        background-image: url(./img/ac8.webp);
+        background-size: cover;
+        }
+        
+        .imgAc9 {
+        background-image: url(./img/ac9.webp);
+        background-size: cover;
+        }
+
+        .imgAc {
+            background-color: aliceblue;
+            border: 3px solid red;
+            transition: transform 0.3s ease-in-out; 
+        }
+        
+        .imgAc:hover {
+            transform: translateY(-10px); 
+        }
+        
+        /* bajos */
+        
+        .galeriaBajos {
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 400px 400px 400px;
+        margin-top: 100px;
+        column-gap: 400px;
+        row-gap: 200px;
+        justify-content: center;
+        }
+        
+        .imgBajos {
+        background-color: aliceblue;
+        border: 3px solid rgb(0, 0, 71);
+        }
+        
+        .imgBajos1 {
+        background-image: url(./img/bajo1.webp);
+        background-size: cover;
+        }
+        
+        .imgBajos2 {
+        background-image: url(./img/bajo2.webp);
+        background-size: cover;
+        }
+        
+        .imgBajos3 {
+        background-image: url(./img/bajo3.webp);
+        background-size: cover;
+        }
+        
+        .imgBajos4 {
+        background-image: url(./img/bajo4.webp);
+        background-size: cover;
+        }
+        
+        .imgBajos5 {
+        background-image: url(./img/bajo5.webp);
+        background-size: cover;
+        }
+        
+        .imgBajos6 {
+        background-image: url(./img/bajo6.webp);
+        background-size: cover;
+        }
+
+        .imgBajos {
+            background-color: aliceblue;
+            border: 3px solid red;
+            transition: transform 0.3s ease-in-out; 
+        }
+        
+        .imgBajos:hover {
+            transform: translateY(-10px); 
+        }
+        
+        .footerBajos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        margin-top: 200px;
+        height: 190px;
+        background-color: rgb(29, 29, 29);
+        font-size: 20px;
+        }
+
+
